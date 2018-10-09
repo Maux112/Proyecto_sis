@@ -1,0 +1,39 @@
+create table Usuario(Usuario varchar(50) primary key,Clave varchar(100),CodPer varchar(50) FOREIGN KEY (CodPer) REFERENCES persona (CodPer))
+create table Persona(CodPer varchar(50) primary key,Nombre varchar(50),Paterno varchar(50),Materno varchar(50),Direccion varchar(50),telefono varchar(50))
+
+
+create table Producto(codProd varchar(50) primary key,Nombre varchar(50),precio decimal,cantidadmin int,cantidadmax int,caracteristicas varchar (100))
+
+CREATE TABLE Proveedor(CodProveedor varchar(50) primary key,Nombre varchar(50),
+telefono varchar(50))
+
+CREATE TABLE Compra(CodCompra varchar(50) primary key,fechaCompra date,Precio decimal,numeroUnidades int,
+total decimal,CodProd varchar(50) FOREIGN KEY (CodProd) REFERENCES producto (CodProd),
+CodProveedores varchar(50) FOREIGN KEY (CodProveedores) REFERENCES proveedor (CodProveedor),
+CodPer varchar(50) FOREIGN KEY (CodPer) REFERENCES persona (CodPer))
+
+CREATE TABLE Venta(CodVenta varchar(50) primary key,fechaVenta date,Cantidad int
+,CodProd varchar(50) FOREIGN KEY (CodProd) REFERENCES producto (CodProd),
+CodPer varchar(50) FOREIGN KEY (CodPer) REFERENCES persona (CodPer))
+
+CREATE TABLE Transaccion(CodTransaccion varchar(50) primary key,numTran int,
+CodVenta varchar(50) FOREIGN KEY (CodVenta) REFERENCES Venta (CodVenta), 
+CodPer varchar(50) FOREIGN KEY (CodPer) REFERENCES persona (CodPer))
+
+
+insert into Usuario values('Mauro','123','1')
+insert into Persona values('1','Mauro','Cornejo','Pinto','Av.Busch','79633456')
+
+
+insert into producto values ('1','Lapiz',1.5,15,60,'Lapiz 5.2')
+insert into producto values ('2','Marcador',2,5,100,'Azul de agua')
+insert into Producto values ('3','Corrector',5,5,20,'Cinta')
+insert into Producto values ('4','Colores',20,5,24,'Caja de 24 colores') 
+
+select * from Producto
+
+insert into Proveedor values('1','Monami','7945355')
+insert into Proveedor values('2','Faber Castell','8859542')
+insert into Proveedor values('3','ABC','4568796')
+
+select * from Proveedor

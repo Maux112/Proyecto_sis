@@ -1,0 +1,16 @@
+﻿<Window x:Class="Bazar2._0.ABM"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ABM" Height="300" Width="300">
+    <Grid Height="264" Width="292">
+        <Button Content="Editar Productos" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="272" Click="Button_Click"/>
+        <Button Content="Vender" HorizontalAlignment="Left" Margin="10,77,0,0" VerticalAlignment="Top" Width="138"/>
+        <Button Content="Buscar Productos" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="276"/>
+        <Button Content="Editar Proveedores" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="272" Click="Button_Click_1"/>
+        <Button Content="Salir de  Cuenta" HorizontalAlignment="Left" Margin="184,234,0,0" VerticalAlignment="Top" Width="92" Click="Button_Click_3"/>
+        <Button Content="Comprar" HorizontalAlignment="Left" Margin="153,77,0,0" VerticalAlignment="Top" Width="133"/>
+
+
+
+    </Grid>
+</Window>
